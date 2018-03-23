@@ -1,45 +1,46 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
+		Platform,
+		StyleSheet,
+		Text,
+		View
 } from 'react-native';
+import { 
+		NavigationActions,
+		StackNavigator, 
+		TabNavigator
+} from 'react-navigation';
 
+import Events from './Components/Events';
+import Births from './Components/Births';
+import Deaths from './Components/Deaths';
 
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+const RootTab = TabNavigator({
+	TabOne: {
+			screen: Events,
+			navigationOptions: {
+					title: 'Events'
+			}
+	},
+	TabTwo: {
+			screen: Search,
+			navigationOptions: {
+					title: 'Births'
+			}
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  TabThree: {
+			screen: Search,
+			navigationOptions: {
+					title: 'Deaths'
+			}
+	}
 });
+
+//The base component for the tab menu
+export default class App extends Component {
+		render() {
+			return (
+				<RootTab />
+			);
+		}
+}
