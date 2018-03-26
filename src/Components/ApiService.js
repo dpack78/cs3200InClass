@@ -1,4 +1,7 @@
 
+import {Births} from '../Components/Births';
+import {Events} from '../Components/Events';
+import {Deaths} from '../Components/Deaths';
 let ApiService = class ApiService
 {
     constructor() 
