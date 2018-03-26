@@ -23,13 +23,13 @@ const RootTab = TabNavigator({
 			}
 	},
 	TabTwo: {
-			screen: Search,
+			screen: Births,
 			navigationOptions: {
 					title: 'Births'
 			}
   },
   TabThree: {
-			screen: Search,
+			screen: Deaths,
 			navigationOptions: {
 					title: 'Deaths'
 			}

@@ -24,12 +24,12 @@ let ApiService = class ApiService
     getTodaysEvents()
     {
         return new Promise((resolve, reject) => {
-            fetch(ApiService.getGenres())
+            fetch(this.getTodaysInfo())
             .then((response) => response.json())
             .then((responseJson) => {
                 let items = [];
-                responseJson.genres.forEach(element => {
-                    items.push(new Events());
+                responseJson.data.Events.forEach(element => {
+                    items.push(new Events(element.year, element.text, element.links));
                 });
                 resolve(items);
             })
@@ -40,43 +40,43 @@ let ApiService = class ApiService
         });
     }
 
-    getTodaysBirths()
-    {
-        return new Promise((resolve, reject) => {
-            fetch(ApiService.getGenres())
-            .then((response) => response.json())
-            .then((responseJson) => {
-                let items = [];
-                responseJson.genres.forEach(element => {
-                    items.push(new Births());
-                });
-                resolve(items);
-            })
-            .catch((error) => {
-                console.error(error);
-                reject(error);
-            });
-        });
-    }
+    // getTodaysBirths()
+    // {
+    //     return new Promise((resolve, reject) => {
+    //         fetch(this.getTodaysInfo())
+    //         .then((response) => response.json())
+    //         .then((responseJson) => {
+    //             let items = [];
+    //             responseJson.data.Births.forEach(element => {
+    //                 items.push(new Births());
+    //             });
+    //             resolve(items);
+    //         })
+    //         .catch((error) => {
+    //             console.error(error);
+    //             reject(error);
+    //         });
+    //     });
+    // }
 
-    getTodaysDeaths()
-    {
-        return new Promise((resolve, reject) => {
-            fetch(ApiService.getGenres())
-            .then((response) => response.json())
-            .then((responseJson) => {
-                let items = [];
-                responseJson.genres.forEach(element => {
-                    items.push(new Deaths());
-                });
-                resolve(items);
-            })
-            .catch((error) => {
-                console.error(error);
-                reject(error);
-            });
-        });
-    }
+    // getTodaysDeaths()
+    // {
+    //     return new Promise((resolve, reject) => {
+    //         fetch(this.getTodaysInfo())
+    //         .then((response) => response.json())
+    //         .then((responseJson) => {
+    //             let items = [];
+    //             responseJson.data.Deaths.forEach(element => {
+    //                 items.push(new Deaths());
+    //             });
+    //             resolve(items);
+    //         })
+    //         .catch((error) => {
+    //             console.error(error);
+    //             reject(error);
+    //         });
+    //     });
+    // }
 
     
 
