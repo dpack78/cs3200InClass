@@ -1,0 +1,8 @@
+year
+text
+links
+    title 
+    link
+
+
+https://images.pexels.com/photos/386148/pexels-photo-386148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
