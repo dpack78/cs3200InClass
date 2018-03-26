@@ -5,7 +5,7 @@ import {
 		Text,
 		View
 } from 'react-native';
-import Styles from '../Styles/Styles'
+import Styles from '../styles/Styles'
 import UtilityFunctions from './UtilityFunctions'
 import ApiService from './ApiService'
 

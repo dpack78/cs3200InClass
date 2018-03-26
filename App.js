@@ -11,7 +11,7 @@ import {
 		TabNavigator
 } from 'react-navigation';
 
-import Events from './src/Components/Events';
+import Events from './src/Components/EventsScreen';
 import Births from './src/Components/Births';
 import Deaths from './src/Components/Deaths';
 
