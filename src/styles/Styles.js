@@ -28,5 +28,11 @@ export default StyleSheet.create({
     },
     Link:{
 
+    },
+    TextOnImage:{
+        backgroundColor: 'rgba(52, 52, 52, 0.8)',
+        borderRadius:10,
+        margin: 3,
+        padding:5
     }
 });

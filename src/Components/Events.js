@@ -24,10 +24,12 @@ export default class Events extends Component {
 	render() {
 		return (
 			<View>
-				<Text style={Styles.headerText}>
-					Important Events that occurred on {UtilityFunctions.getCurrentDate()}
-				</Text>
+				<ImageBackground source={"https://images.pexels.com/photos/386148/pexels-photo-386148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}>
+					<Text style={Styles.headerText}>
+						Important Events that occurred on {UtilityFunctions.getCurrentDate()}
+					</Text>
 				{this.state.data != null ? this._renderEvents() : <Text>Loading...</Text>} {/* Display loading text while data from api is being retrieved */}
+				</ImageBackground>
 			</View>
 		);
 	}
@@ -47,6 +49,7 @@ export default class Events extends Component {
 	//Put data from api into a FlatList to be rendered
 	_renderEvents() {
 		return (<FlatList
+			style={Styles.TextOnImage}
 			data = {this.state.data}
 			//keyExtractor = {(item, index) => item.something} //TODO: Change item.something
 			renderItem={this._renderItem}

@@ -5,7 +5,7 @@ import {
 		Text,
 		View
 } from 'react-native';
-import Styles from '../Styles/Styles'
+import Styles from '../Styles/styles'
 import UtilityFunctions from './UtilityFunctions'
 import ApiService from './ApiService'
 
@@ -13,9 +13,11 @@ export default class Deaths extends Component {
 		render() {
 			return (
                 <View>
-                    <Text style={Styles.headerText}>
-                        Famous Deaths on {UtilityFunctions.getCurrentDate()}
-                    </Text>
+					<ImageBackground source={"https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}>
+						<Text style={Styles.headerText}>
+							Famous Deaths on {UtilityFunctions.getCurrentDate()}
+						</Text>
+					</ImageBackground>
                 </View>
 			);
 		}
