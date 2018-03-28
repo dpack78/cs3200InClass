@@ -13,9 +13,11 @@ export default class Births extends Component {
 		render() {
 			return (
                 <View>
-                    <Text style={Styles.headerText}>
-                        Famous Births on {UtilityFunctions.getCurrentDate()}
-                    </Text>
+					<ImageBackground source={"https://images.pexels.com/photos/5309/dawn-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}>
+                    	<Text style={Styles.headerText}>
+                        	Famous Births on {UtilityFunctions.getCurrentDate()}
+                    	</Text>
+					</ImageBackground>
 					{this.state.data != null ? this._renderDeaths() : <Text>Loading...</Text>}
                 </View>
 			);

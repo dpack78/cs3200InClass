@@ -13,9 +13,11 @@ export default class Deaths extends Component {
 		render() {
 			return (
                 <View>
-                    <Text style={Styles.headerText}>
-                        Famous Deaths on {UtilityFunctions.getCurrentDate()}
-                    </Text>
+					<ImageBackground source={"https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}>
+                    	<Text style={Styles.headerText}>
+                        	Famous Deaths on {UtilityFunctions.getCurrentDate()}
+                    	</Text>
+					</ImageBackground>
 					{this.state.data != null ? this._renderDeaths() : <Text>Loading...</Text>}
                 </View>
 			);
