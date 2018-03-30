@@ -30,7 +30,7 @@ export default class BirthsScreen extends Component {
 					<Text style={Styles.headerText}>
 						Famous people born on {UtilityFunctions.getCurrentDate()}
 					</Text>
-				{this.state.data != null ? this._renderBirths() : <Text>Loading...</Text>}
+					{this.state.data != null ? this._renderBirths() : <Text>Loading...</Text>}
 				</ImageBackground>
 			</View>
 		);
@@ -60,10 +60,10 @@ export default class BirthsScreen extends Component {
 	// Set how each item inside this.state.data is displayed. Used as the FlatList's renderItem method.
     _renderItem = ({item}) => {
         return (
-        <View style={[Styles.listElementView, Styles.TextOnImage]}>
-			<Text style={Styles.whiteText} >{item.year}</Text>
-            <Text style={Styles.whiteText} >{item.text}</Text>
-        </View>
-        );
+			<View style={[Styles.listElementView, Styles.TextOnImage]}>
+				<Text style={Styles.whiteText} >{item.year}</Text>
+				<Text style={Styles.whiteText} >{item.text}</Text>
+			</View>
+		);
       }
 }
