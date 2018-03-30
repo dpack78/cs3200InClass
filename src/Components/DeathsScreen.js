@@ -26,12 +26,13 @@ export default class DeathsScreen extends Component {
 	render() {
 		return (
 			<View>
-				{/* <ImageBackground source={"https://images.pexels.com/photos/5309/dawn-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}> */}
+				<ImageBackground style={Styles.imageBack} source={{uri: "https://images.pexels.com/photos/5412/water-blue-ocean.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}}>
 					<Text style={Styles.headerText}>
 						Famous people who died on {UtilityFunctions.getCurrentDate()}
 					</Text>
-				{/* </ImageBackground> */}
-				{this.state.data != null ? this._renderDeaths() : <Text>Loading...</Text>}
+					{this.state.data != null ? this._renderDeaths() : <Text>Loading...</Text>}
+				</ImageBackground>
+				
 			</View>
 		);
 	}
@@ -60,10 +61,10 @@ export default class DeathsScreen extends Component {
 	// Set how each item inside this.state.data is displayed. Used as the FlatList's renderItem method.
     _renderItem = ({item}) => {
         return (
-        <View style={Styles.listElementView}>
-			<Text>{item.year}</Text>
-			<Text>{item.text}</Text>
-        </View>
-        );
+			<View style={[Styles.listElementView, Styles.TextOnImage]}>
+				<Text style={Styles.whiteText} >{item.year}</Text>
+				<Text style={Styles.whiteText} >{item.text}</Text>
+			</View>
+			);
       }
 }
