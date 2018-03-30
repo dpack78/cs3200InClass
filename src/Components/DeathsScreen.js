@@ -28,7 +28,7 @@ export default class DeathsScreen extends Component {
 			<View>
 				{/* <ImageBackground source={"https://images.pexels.com/photos/5309/dawn-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}> */}
 					<Text style={Styles.headerText}>
-						Famous Deaths on {UtilityFunctions.getCurrentDate()}
+						Famous people who died on {UtilityFunctions.getCurrentDate()}
 					</Text>
 				{/* </ImageBackground> */}
 				{this.state.data != null ? this._renderDeaths() : <Text>Loading...</Text>}
