@@ -19,19 +19,19 @@ const RootTab = TabNavigator({
 	TabOne: {
 		screen: EventsScreen,
 		navigationOptions: {
-			title: 'EventsScreen'
+			title: 'Events'
 		}
 	},
 	TabTwo: {
 		screen: BirthsScreen,
 		navigationOptions: {
-			title: 'BirthsScreen'
+			title: 'Births'
 		}
 	},
 	TabThree: {
 		screen: DeathsScreen,
 		navigationOptions: {
-				title: 'DeathsScreen'
+			title: 'Deaths'
 		}
 	}
 },
