@@ -17,23 +17,26 @@ import DeathsScreen from './src/Components/DeathsScreen';
 
 const RootTab = TabNavigator({
 	TabOne: {
-			screen: EventsScreen,
-			navigationOptions: {
-					title: 'EventsScreen'
-			}
+		screen: EventsScreen,
+		navigationOptions: {
+			title: 'EventsScreen'
+		}
 	},
 	TabTwo: {
-			screen: BirthsScreen,
-			navigationOptions: {
-					title: 'BirthsScreen'
-			}
+		screen: BirthsScreen,
+		navigationOptions: {
+			title: 'BirthsScreen'
+		}
 	},
-	// TabThree: {
-		// creen: DeathsScreen,
-		// navigationOptions: {
-				// title: 'DeathsScreen'
-		// }
-	// }
+	TabThree: {
+		screen: DeathsScreen,
+		navigationOptions: {
+				title: 'DeathsScreen'
+		}
+	}
+},
+{
+	tabBarPosition: 'bottom'
 });
 
 //The base component for the tab menu
