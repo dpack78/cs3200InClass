@@ -48,7 +48,6 @@ export default StyleSheet.create({
         paddingTop: 23,
         color: '#000000',
         fontSize: 20,
-        borderRadius:10
     }
 
 });
