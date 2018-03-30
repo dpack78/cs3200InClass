@@ -26,7 +26,7 @@ export default class BirthsScreen extends Component {
 	render() {
 		return (
 			<View>
-				<ImageBackground style={Styles.imageBack} source={{uri: "https://images.pexels.com/photos/5412/water-blue-ocean.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}}>
+				<ImageBackground style={Styles.imageBack} source={{uri: "https://images.pexels.com/photos/11434/Life-of-Pix-free-stock-photos-sunset-sea-light-mikewilson.jpeg?cs=srgb&dl=horizon-salt-water-sea-11434.jpg&fm=jpg"}}>
 					<Text style={Styles.headerText}>
 						Famous people born on {UtilityFunctions.getCurrentDate()}
 					</Text>

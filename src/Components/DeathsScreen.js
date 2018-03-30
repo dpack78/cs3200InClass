@@ -26,7 +26,7 @@ export default class DeathsScreen extends Component {
 	render() {
 		return (
 			<View>
-				<ImageBackground style={Styles.imageBack} source={{uri: "https://images.pexels.com/photos/5412/water-blue-ocean.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}}>
+				<ImageBackground style={Styles.imageBack} source={{uri: "https://images.pexels.com/photos/241821/pexels-photo-241821.jpeg?cs=srgb&dl=lantern-light-rustic-241821.jpg&fm=jpg"}}>
 					<Text style={Styles.headerText}>
 						Famous people who died on {UtilityFunctions.getCurrentDate()}
 					</Text>
