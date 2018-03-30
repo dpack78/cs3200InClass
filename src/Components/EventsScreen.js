@@ -30,7 +30,7 @@ export default class Events extends Component {
 					<Text style={Styles.headerText}>
 						Important Events that occurred on {UtilityFunctions.getCurrentDate()}
 					</Text>
-					{this.state.data != null ? this._renderEvents() : <Text>Loading...</Text>} {/* Display loading text while data from api is being retrieved */}
+					{this.state.data != null ? this._renderEvents() : <Text>Loading...</Text>} 
 				</ImageBackground>
 			</View>
 		);

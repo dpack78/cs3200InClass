@@ -30,8 +30,9 @@ export default class BirthsScreen extends Component {
 					<Text style={Styles.headerText}>
 						Famous people born on {UtilityFunctions.getCurrentDate()}
 					</Text>
+					{this.state.data != null ? this._renderBirths() : <Text>Loading...</Text>}
 				</ImageBackground>
-				{this.state.data != null ? this._renderBirths() : <Text>Loading...</Text>}
+				
 			</View>
 		);
 	}
