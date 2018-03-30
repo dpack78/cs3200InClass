@@ -49,7 +49,7 @@ export default class Events extends Component {
 	_renderEvents() {
 		return (<FlatList
 			data = {this.state.data}
-			//keyExtractor = {(item, index) => item.something} //TODO: Change item.something
+			keyExtractor = {(item, index) => item.text} //TODO: Change item.something
 			renderItem={this._renderItem}
 	/>);
 	}

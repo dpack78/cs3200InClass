@@ -52,7 +52,7 @@ export default class DeathsScreen extends Component {
 	_renderDeaths() {
 		return (<FlatList
 			data = {this.state.data}
-			//keyExtractor = {(item, index) => item.something} //TODO: Change item.something
+			keyExtractor = {(item, index) => item.text} //TODO: Change item.something
 			renderItem={this._renderItem}
 	/>);
 	}
