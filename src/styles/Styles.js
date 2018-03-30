@@ -30,9 +30,25 @@ export default StyleSheet.create({
 
     },
     TextOnImage:{
-        backgroundColor: 'rgba(52, 52, 52, 0.8)',
+        backgroundColor: 'rgba(52, 52, 52, 0.5)',
         borderRadius:10,
         margin: 3,
-        padding:5
+        padding:5,
+    },
+    whiteText:{
+        color: '#ffffff'
+    },
+    imageBack:{
+        width: "100%",
+        height: "100%"
+    },
+    headerText:{
+        backgroundColor: '#ffffff',
+        padding:8,
+        paddingTop: 23,
+        color: '#000000',
+        fontSize: 20,
+        borderRadius:10
     }
+
 });
