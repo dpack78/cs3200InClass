@@ -5,7 +5,10 @@ import {
 		Text,
 		View,
 		FlatList,
-		ImageBackground
+		ImageBackground,
+		TouchableOpacity,
+		Alert,
+		Linking,
 } from 'react-native';
 import Styles from '../styles/Styles'
 import UtilityFunctions from './UtilityFunctions'
@@ -57,13 +60,19 @@ export default class Events extends Component {
 	/>);
 	}
 
+	_viewDetails(item)
+	{
+		Linking.openURL(item.links[0].link).catch(err => console.error('An error occurred', err));
+	}
+
 	// Set how each item inside this.state.data is displayed. Used as the FlatList's renderItem method.
     _renderItem = ({item}) => {
         return (
-        <View style={[Styles.listElementView, Styles.TextOnImage]}>
+        <TouchableOpacity style={[Styles.listElementView, Styles.TextOnImage]}
+		onPress={() => this._viewDetails(item)}>
 			<Text style={Styles.whiteText} >{item.year}</Text>
             <Text style={Styles.whiteText} >{item.text}</Text>
-        </View>
+        </TouchableOpacity>
         );
       }
 }
